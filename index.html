@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Enzo Maximiliano Rodrigues Lemes | Analista de Sistemas e Engenheiro de Software</title>
+    <meta name="description" content="Portfólio de Enzo Maximiliano Rodrigues Lemes, Analista de Sistemas e Engenheiro de Software em Maringá (PR), com experiência em infraestrutura de TI, automação de processos e desenvolvimento de sistemas.">
+    <meta name="author" content="Enzo Maximiliano Rodrigues Lemes">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#07070c">
+
+    <link rel="alternate" hreflang="pt-BR" href="https://enzomaximilinao.github.io/portf/">
+    <link rel="alternate" hreflang="en" href="https://enzomaximilinao.github.io/portf/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://enzomaximilinao.github.io/portf/">
+
+    <!-- Prévia ao compartilhar o link (LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Enzo Maximiliano">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:url" content="https://enzomaximilinao.github.io/portf/">
+    <meta property="og:title" content="Enzo Maximiliano Rodrigues Lemes | Analista de Sistemas e Engenheiro de Software">
+    <meta property="og:description" content="Infraestrutura de TI, automação de processos e desenvolvimento de sistemas. Maringá, PR.">
+    <meta property="og:image" content="https://enzomaximilinao.github.io/portf/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Enzo Maximiliano Rodrigues Lemes, Analista de Sistemas e Engenheiro de Software">
+    <meta property="profile:first_name" content="Enzo">
+    <meta property="profile:last_name" content="Maximiliano Rodrigues Lemes">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enzo Maximiliano Rodrigues Lemes | Analista de Sistemas e Engenheiro de Software">
+    <meta name="twitter:description" content="Infraestrutura de TI, automação de processos e desenvolvimento de sistemas. Maringá, PR.">
+    <meta name="twitter:image" content="https://enzomaximilinao.github.io/portf/img/og-image.png">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap">
+    <link rel="preload" as="image" href="img/foto.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Aplica tema e idioma antes da primeira pintura, sem piscar -->
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var theme = "dark";
+            var lang = "pt";
+            root.classList.add("js");
+            try {
+                if (localStorage.getItem("theme") === "light") theme = "light";
+                var fromUrl = new URLSearchParams(location.search).get("lang");
+                if (fromUrl === "en" || fromUrl === "pt") lang = fromUrl;
+                else if (localStorage.getItem("lang") === "en") lang = "en";
+            } catch (e) {}
+            root.dataset.theme = theme;
+            root.lang = lang === "en" ? "en" : "pt-BR";
+            // Rede de segurança: se o script principal falhar, o conteúdo aparece mesmo assim.
+            setTimeout(function () {
+                if (!window.PORTFOLIO_READY) root.classList.add("failsafe");
+            }, 3000);
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "url": "https://enzomaximilinao.github.io/portf/",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Enzo Maximiliano Rodrigues Lemes",
+            "alternateName": "Enzo Maximiliano",
+            "description": "Analista de Sistemas e Engenheiro de Software em Maringá (PR), com experiência em infraestrutura de TI, automação de processos e desenvolvimento de sistemas.",
+            "image": "https://enzomaximilinao.github.io/portf/img/foto.jpg",
+            "jobTitle": "Analista de Sistemas",
+            "worksFor": { "@type": "Organization", "name": "Official TI" },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Maringá",
+                "addressRegion": "PR",
+                "addressCountry": "BR"
+            },
+            "alumniOf": [{ "@type": "CollegeOrUniversity", "name": "UNICESUMAR" }],
+            "knowsLanguage": ["pt-BR", "en"],
+            "sameAs": [
+                "https://www.linkedin.com/in/enzo-maximiliano/",
+                "https://github.com/enzomaximilinao"
+            ]
+        }
+    }
+    </script>
+
+    <script src="conteudo.js" defer></script>
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+    <div class="progress" id="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+
+    <!-- ==========================================================
+         CABEÇALHO
+         ========================================================== -->
+
+    <header class="header is-top" id="header">
+        <div class="header__inner">
+
+            <a class="logo" href="#inicio" aria-label="Enzo Maximiliano Rodrigues Lemes">
+                <span class="logo__mark">EM</span>
+            </a>
+
+            <nav class="nav" data-i18n-aria="menuTitle" aria-label="Navegação">
+                <ul class="nav__list" id="nav-list"></ul>
+                <span class="nav__indicator" aria-hidden="true"></span>
+            </nav>
+
+            <div class="header__actions">
+
+                <button class="kbd-btn" id="palette-btn" type="button" data-i18n-aria="palette" aria-label="Abrir paleta de comandos">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7.5" /><path d="m20.5 20.5-4.2-4.2" /></svg>
+                    <kbd class="kbd-btn__keys" id="palette-keys">Ctrl K</kbd>
+                </button>
+
+                <div class="lang-switch" role="group" data-i18n-aria="language" aria-label="Idioma">
+                    <button class="lang-switch__btn" type="button" data-lang="pt" aria-label="Português">
+                        <img src="img/flag-br.png" alt="" width="22" height="22">
+                        <span>PT</span>
+                    </button>
+                    <button class="lang-switch__btn" type="button" data-lang="en" aria-label="English">
+                        <img src="img/flag-us.png" alt="" width="22" height="22">
+                        <span>EN</span>
+                    </button>
+                    <span class="lang-switch__thumb" aria-hidden="true"></span>
+                </div>
+
+                <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Ativar tema claro">
+                    <svg class="theme-toggle__svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <mask id="theme-mask">
+                            <rect x="0" y="0" width="24" height="24" fill="#fff" />
+                            <circle class="theme-toggle__cut" cx="12" cy="12" r="9" fill="#000" />
+                        </mask>
+                        <circle class="theme-toggle__core" cx="12" cy="12" r="9" mask="url(#theme-mask)" />
+                        <g class="theme-toggle__rays">
+                            <path d="M12 1.5v2M12 20.5v2M3.6 3.6l1.4 1.4M19 19l1.4 1.4M1.5 12h2M20.5 12h2M3.6 20.4 5 19M19 5l1.4-1.4" />
+                        </g>
+                    </svg>
+                </button>
+
+                <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+                    <span class="menu-btn__lines" aria-hidden="true"><span></span><span></span></span>
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ==========================================================
+         MENU DO CELULAR
+         ========================================================== -->
+
+    <dialog class="menu" id="menu" data-i18n-aria="menuTitle" aria-label="Navegação">
+        <div class="menu__inner" id="menu-inner"></div>
+    </dialog>
+
+
+    <!-- ==========================================================
+         CONTEÚDO (montado a partir do conteudo.js)
+         ========================================================== -->
+
+    <main id="conteudo" tabindex="-1">
+        <section class="hero" id="inicio"></section>
+        <div class="marquee" id="marquee"></div>
+        <section class="section about" id="sobre"></section>
+        <section class="section experience" id="experiencias"></section>
+        <section class="section skills" id="habilidades"></section>
+        <section class="section education" id="formacao"></section>
+        <section class="section contact" id="contato"></section>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+
+    <!-- ==========================================================
+         ELEMENTOS FLUTUANTES
+         ========================================================== -->
+
+    <a class="to-top" id="to-top" href="#inicio" data-i18n-aria="footer.top" aria-label="Voltar ao topo">
+        <svg class="to-top__ring" viewBox="0 0 48 48" aria-hidden="true">
+            <circle class="to-top__track" cx="24" cy="24" r="21" />
+            <circle class="to-top__value" cx="24" cy="24" r="21" />
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5" /><path d="m5 12 7-7 7 7" /></svg>
+    </a>
+
+    <dialog class="palette" id="palette" data-i18n-aria="palette" aria-label="Paleta de comandos">
+        <div class="palette__box">
+            <div class="palette__search">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7.5" /><path d="m20.5 20.5-4.2-4.2" /></svg>
+                <input class="palette__input" id="palette-input" type="text" role="combobox" aria-expanded="true"
+                    aria-controls="palette-list" aria-autocomplete="list" autocomplete="off" spellcheck="false">
+                <kbd>esc</kbd>
+            </div>
+            <ul class="palette__list" id="palette-list" role="listbox" data-i18n-aria="palette" aria-label="Paleta de comandos"></ul>
+            <p class="sr-only" id="palette-status" role="status"></p>
+            <div class="palette__foot" id="palette-foot"></div>
+        </div>
+    </dialog>
+
+    <dialog class="lightbox" id="lightbox">
+        <figure class="lightbox__figure">
+            <div class="lightbox__stage" id="lightbox-stage">
+                <img class="lightbox__img" id="lightbox-img" src="data:," alt="">
+            </div>
+            <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="icon-btn lightbox__close" id="lightbox-close" type="button" data-i18n-aria="lightbox.close" aria-label="Fechar" autofocus>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+        </button>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="suggest" id="suggest" hidden></div>
+    <canvas class="rain" id="rain" aria-hidden="true"></canvas>
+
+    <noscript>
+        <div class="noscript">
+            <p>Este portfólio precisa de JavaScript para ser exibido. Contato: enzo.max.rlemes@gmail.com</p>
+            <p lang="en">This portfolio needs JavaScript to be displayed. Contact: enzo.max.rlemes@gmail.com</p>
+        </div>
+    </noscript>
+
+</body>
+
+</html>
